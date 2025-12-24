@@ -1,0 +1,597 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* 🌸 РОЗОВАЯ ТЕМА */
+    --primary-color: #e91e63;        /* Яркий розовый */
+    --secondary-color: #c2185b;      /* Темно-розовый */
+    --accent-color: #00bcd4;         /* Бирюзовый для контраста */
+    --text-color: #333344;           /* Темно-серый текст */
+    --bg-color: #fff5f7;             /* Светло-розовый фон */
+    --card-bg: #ffffff;              /* Белый для карточек */
+    --shadow: 0 4px 12px rgba(233, 30, 99, 0.1);
+    --border-radius: 10px;
+    --transition: all 0.3s ease;
+}
+
+.dark-theme {
+    --primary-color: #ff4081;        /* Неоново-розовый */
+    --secondary-color: #f50057;      /* Яркий розовый */
+    --accent-color: #18ffff;         /* Светло-бирюзовый */
+    --text-color: #f8bbd9;           /* Светло-розовый текст */
+    --bg-color: #1a0012;             /* Темно-бордовый фон */
+    --card-bg: #2a001f;              /* Темно-розовые карточки */
+    --shadow: 0 4px 12px rgba(255, 64, 129, 0.2);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: var(--transition);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--primary-color);
+}
+
+/* Навигационная панель */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-left: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: var(--transition);
+    margin-left: 20px;
+}
+
+.theme-toggle:hover {
+    color: var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 3px 0;
+    transition: var(--transition);
+}
+
+/* Шапка */
+.header {
+    padding: 150px 0 80px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-image {
+    flex: 1;
+    text-align: center;
+    min-width: 250px;
+    margin-right: 50px;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+.header-content {
+    flex: 2;
+    min-width: 300px;
+}
+
+.header-name {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.header-pitch {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #3daa8a;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button.secondary {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.cta-button.secondary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Секции */
+.hero {
+    text-align: center;
+}
+
+.courses-grid, .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.course-card, .project-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.course-card:hover, .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.course-platform {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.course-desc, .project-desc {
+    margin-bottom: 20px;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.cert-img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.cert-img:hover {
+    opacity: 0.9;
+}
+
+.cert-link, .project-link, .practice-link, .social-link, .footer-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    margin-top: 10px;
+}
+
+.cert-link i, .project-link i, .practice-link i, .social-link i, .footer-link i {
+    margin-right: 8px;
+}
+
+.cert-link:hover, .project-link:hover, .practice-link:hover, .social-link:hover, .footer-link:hover {
+    color: var(--secondary-color);
+}
+
+.project-role {
+    margin-bottom: 15px;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.practice-content {
+    text-align: center;
+}
+
+.practice-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.practice-gallery img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.practice-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Дорожная карта */
+.roadmap {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.roadmap-item {
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--shadow);
+}
+
+.roadmap-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+
+.roadmap-content {
+    flex: 1;
+}
+
+.roadmap-content h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.skill-tag {
+    background-color: rgba(74, 111, 165, 0.1);
+    color: var(--primary-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Обо мне */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 2;
+    min-width: 300px;
+}
+
+.about-links {
+    flex: 1;
+    min-width: 250px;
+}
+
+.skills-container {
+    margin-top: 30px;
+}
+
+.skill-category {
+    margin-bottom: 25px;
+}
+
+.skill-category h4 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-item {
+    background-color: var(--card-bg);
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    font-weight: 500;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Подвал */
+.footer {
+    background-color: var(--card-bg);
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.footer-year {
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+#modalImage {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header-image {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .header-name {
+        font-size: 2.3rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--card-bg);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 20px 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li {
+        margin: 15px 0;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    .roadmap-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .roadmap-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-name {
+        font-size: 2rem;
+    }
+    
+    .header-title {
+        font-size: 1.2rem;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .course-card, .project-card, .roadmap-item {
+        padding: 20px;
+    }
+}

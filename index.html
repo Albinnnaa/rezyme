@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калбодова Албина - Сайт-резюме</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Навигационная панель -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">К.А.</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#courses">Курсы</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#practice">Практика</a></li>
+                <li><a href="#selfdev">Саморазвитие</a></li>
+                <li><a href="#about">Обо мне</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Шапка сайта -->
+    <header class="header" id="home">
+        <div class="header-container">
+            <div class="header-image">
+                <img src="images/profile.jpg" alt="Фото Никиты Брюханова" class="profile-img">
+            </div>
+            <div class="header-content">
+                <h1 class="header-name">Калбодова Албина Амадбековна </h1>
+                <h2 class="header-title">Студент-разработчик: Angular • DevOps • Информационная безопасность</h2>
+                <p class="header-pitch">Создаю надёжные веб-приложения и автоматизирую инфраструктуру. Умею учиться быстро и решать нетривиальные задачи.</p>
+                <a href="#projects" class="cta-button">Смотреть проекты</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Раздел: Главная -->
+        <section class="section hero" id="hero">
+            <div class="container">
+                <h2>Добро пожаловать в моё портфолио</h2>
+                <p>Я студентка Люберецкого техникума, изучающий информационные системы и программирование. Здесь вы найдёте информацию о моих проектах, курсах и навыках.</p>
+                <a href="#skills" class="cta-button secondary">Изучить навыки</a>
+            </div>
+        </section>
+
+        <!-- Раздел: Курсы -->
+        <section class="section courses" id="courses">
+            <div class="container">
+                <h2 class="section-title">Пройденные курсы</h2>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="course-header">
+                            <h3>Промпт-инжиниринг и LLM</h3>
+                            <span class="course-platform">СберУниверситет</span>
+                        </div>
+                        <p class="course-desc">Промпт-инжиниринг, работа с LLM, RAG, GigaChain</p>
+                        <div class="course-certificate">
+                            <img src="images/loll.jpg" alt="Сертификат" class="cert-img">
+                            <a href="#" class="cert-link">Посмотреть сертификат</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-header">
+                            <h3>Frontend-разработка</h3>
+                            <span class="course-platform">Айтилогия</span>
+                        </div>
+                        <p class="course-desc">HTML, CSS, JavaScript, React, адаптивная вёрстка</p>
+                        <div class="course-certificate">
+                            <img src="images/front.jpeg" alt="Сертификат" class="cert-img">
+                            <a href="#" class="cert-link">Посмотреть сертификат</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-header">
+                            
+                            <span class="course-platform">Яндекс</span>
+                        </div>
+                        <p class="course-desc">Яндекс лицей Frontend  шаг за шагом</p>
+                        <div class="course-certificate">
+                            <img src="images/llll.png" alt="Сертификат" class="cert-img">
+                            <a href="#" class="cert-link">Посмотреть сертификат</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Раздел: Проекты -->
+        <section class="section projects" id="projects">
+            <div class="container">
+                <h2 class="section-title">Мои проекты</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Документооборот в команде</h3>
+                        <p class="project-desc">Реализация системы документооборота для команды разработчиков</p>
+                        <div class="project-role">
+                            <strong>Роль:</strong> программист, аналитик
+                        </div>
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i> Репозиторий на GitHub
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Проект для конкурса «Система»</h3>
+                        <p class="project-desc">Разработка системы автоматизации для конкурса технических проектов</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-folder"></i> Документация и презентация
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-certificate"></i> Сертификат участника
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Раздел: Практика -->
+        <section class="section practice" id="practice">
+            <div class="container">
+                <h2 class="section-title">Производственная практика</h2>
+                <div class="practice-content">
+                    <p>Проходила производственную практику в миграционной службе, где занималась обработкой и ведением документации. Основными направлениями деятельности стали ввод данных в электронные системы, подготовка документов к архивированию и обеспечение корректности официальной документации.</p>
+                    <div class="practice-links">
+                        <a href="#" class="practice-link">
+                            <i class="fas fa-book-open"></i> 
+                        </a>
+                    </div>
+                    <div class="practice-gallery">
+                        <img src="images/прак.jpg" alt="Практика">
+                        <img src="images/tik.jpg" alt="Практика">
+                        <img src="images/ka.jpg" alt="Практика">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Раздел: Саморазвитие -->
+        <section class="section selfdev" id="selfdev">
+            <div class="container">
+                <h2 class="section-title">Дорожная карта саморазвития</h2>
+                <div class="roadmap">
+                    <div class="roadmap-item">
+                        <div class="roadmap-icon">
+                            <i class="fab fa-angular"></i>
+                        </div>
+                        <div class="roadmap-content">
+                            <h3>Frontend</h3>
+                            <p>HTML, CSS, Bootstrap, Angular, TypeScript</p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">HTML</span>
+                                <span class="skill-tag">CSS</span>
+                                <span class="skill-tag">Angular</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-icon">
+                            <i class="fab fa-docker"></i>
+                        </div>
+                        <div class="roadmap-content">
+                            <h3>DevOps</h3>
+                            <p>Docker, Kubernetes, Terraform, GitLab CI/CD, GitOps</p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">Kubernetes</span>
+                                <span class="skill-tag">Terraform</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="roadmap-content">
+                            <h3>Безопасность</h3>
+                            <p>Сетевая безопасность, DDoS-защита, шифрование, DevSecOps</p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Network</span>
+                                <span class="skill-tag">Encryption</span>
+                                <span class="skill-tag">DevSecOps</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Раздел: Обо мне -->
+        <section class="section about" id="about">
+            <div class="container">
+                <h2 class="section-title">Обо мне</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Учусь в ГБПОУ МО «Люберецкий техникум имени Ю.А. Гагарина» по специальности 09.02.07 «Информационные системы и программирование».</p>
+                        <p>Заинтересован в frontend, DevOps, информационной безопасности и генеративных технологиях.</p>
+                        
+                        <h3>Навыки</h3>
+                        <div class="skills-container" id="skills">
+                            <div class="skill-category">
+                                <h4>Языки программирования:</h4>
+                                <div class="skill-items">
+                                    <span class="skill-item">JavaScript</span>
+                                    <span class="skill-item">TypeScript</span>
+                                    <span class="skill-item">SQL</span>
+                                    <span class="skill-item">1C</span>
+                                    <span class="skill-item">Bash</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Инструменты и технологии:</h4>
+                                <div class="skill-items">
+                                    <span class="skill-item">Angular</span>
+                                    <span class="skill-item">Git</span>
+                                    <span class="skill-item">Docker</span>
+                                    <span class="skill-item">Kubernetes</span>
+                                    <span class="skill-item">Terraform</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Soft skills:</h4>
+                                <div class="skill-items">
+                                    <span class="skill-item">Тайм-менеджмент</span>
+                                    <span class="skill-item">Дисциплина</span>
+                                    <span class="skill-item">Работа в команде</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-links">
+                        <h3>Контакты и ссылки</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-telegram"></i> Telegram
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-vk"></i> ВКонтакте
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fas fa-tasks"></i> GitHub Projects
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <p> ГБПОУ МО «Люберецкий техникум имени Героя Советского Союза, лётчика-космонавта Ю.А. Гагарина»</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">
+                    <i class="fab fa-github"></i> Репозиторий проекта
+                </a>
+                <a href="#" class="footer-link">
+                    <i class="fas fa-external-link-alt"></i> Опубликованная версия (GitHub Pages)
+                </a>
+            </div>
+            <p class="footer-year">Год окончания обучения: 2027</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для изображений -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modalImage" src="" alt="">
+        </div>
+    </div>
+
+    <script>
+// ==================== ТЕМНАЯ ТЕМА ====================
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM загружен - начинаю инициализацию');
+    
+    // Находим кнопку темы
+    const themeToggle = document.getElementById('themeToggle');
+    console.log('Кнопка темы найдена:', themeToggle);
+    
+    if (!themeToggle) {
+        console.error('❌ Кнопка темы не найдена! Проверьте id="themeToggle"');
+        // Создаем кнопку, если её нет
+        const navContainer = document.querySelector('.nav-container');
+        if (navContainer) {
+            const newButton = document.createElement('button');
+            newButton.id = 'themeToggle';
+            newButton.className = 'theme-toggle';
+            newButton.innerHTML = '<i class="fas fa-moon"></i>';
+            navContainer.appendChild(newButton);
+            console.log('✅ Кнопка создана');
+            setupThemeToggle(newButton);
+        }
+        return;
+    }
+    
+    // Настраиваем кнопку
+    setupThemeToggle(themeToggle);
+    
+    // Настраиваем мобильное меню
+    setupMobileMenu();
+    
+    // Настраиваем модальное окно
+    setupModal();
+    
+    // Настраиваем плавную прокрутку
+    setupSmoothScroll();
+});
+
+function setupThemeToggle(button) {
+    // Проверяем сохраненную тему
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    console.log('Сохраненная тема:', savedTheme);
+    
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        button.innerHTML = '<i class="fas fa-sun"></i>';
+        console.log('✅ Темная тема активирована');
+    }
+    
+    // Вешаем обработчик клика
+    button.addEventListener('click', function() {
+        console.log('🎯 Кнопка темы нажата!');
+        
+        // Переключаем класс dark-theme
+        document.body.classList.toggle('dark-theme');
+        
+        // Меняем иконку
+        if (document.body.classList.contains('dark-theme')) {
+            this.innerHTML = '<i class="fas fa-sun"></i>';
+            localStorage.setItem('theme', 'dark');
+            console.log('🌙 Установлена темная тема');
+        } else {
+            this.innerHTML = '<i class="fas fa-moon"></i>';
+            localStorage.setItem('theme', 'light');
+            console.log('☀️ Установлена светлая тема');
+        }
+    });
+    
+    console.log('✅ Кнопка темы настроена');
+}
+
+function setupMobileMenu() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            console.log('📱 Мобильное меню переключено');
+        });
+        
+        // Закрытие меню при клике на ссылку
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        console.log('✅ Мобильное меню настроено');
+    }
+}
+
+function setupModal() {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalClose = document.querySelector('.modal-close');
+    
+    if (modal && modalImage && modalClose) {
+        // Открытие модального окна
+        document.querySelectorAll('.practice-gallery img, .cert-img').forEach(img => {
+            img.addEventListener('click', function() {
+                modal.style.display = 'flex';
+                modalImage.src = this.src;
+                modalImage.alt = this.alt;
+                console.log('🖼️ Открыто изображение:', this.src);
+            });
+        });
+        
+        // Закрытие модального окна
+        modalClose.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+        
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                modal.style.display = 'none';
+            }
+        });
+        
+        console.log('✅ Модальное окно настроено');
+    }
+}
+
+function setupSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                console.log('🔗 Плавный скролл к:', targetId);
+            }
+        });
+    });
+    
+    console.log('✅ Плавная прокрутка настроена');
+}
+
+// ==================== ДЕБАГ-ИНФОРМАЦИЯ ====================
+console.log('=== ДЕБАГ ИНФОРМАЦИЯ ===');
+console.log('1. Кнопка темы:', document.getElementById('themeToggle'));
+console.log('2. Body классы:', document.body.className);
+console.log('3. localStorage тема:', localStorage.getItem('theme'));
+console.log('4. Темная тема активна?', document.body.classList.contains('dark-theme'));
+console.log('=== КОНЕЦ ДЕБАГА ===');
+</script>
+</body>
+</html>
